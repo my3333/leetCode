@@ -28,10 +28,37 @@ function inorderTraversal02(root) {
       inorder(root.left);
       res.push(root.val);
       inorder(root.right);
-
     }
+    return;
   }
 
   inorder(root);
   return res;
+}
+
+
+
+/**
+ * 二叉树的先序遍历
+ */
+
+// 递归
+function firstTraversal(root) {
+  let res = [];
+  const inorder = (root) => {
+    if (root) {
+      res.push(root.val);
+      inorder(root.left);
+      inorder(root.right);
+    }
+    return;
+  }
+  inorder(root);
+  return res;
+}
+// 迭代
+function firstTraversal02(root) {
+  let res = [];
+  let stack = [];   // 用栈存储迭代的结果
+
 }
