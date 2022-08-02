@@ -4,7 +4,7 @@
 
 
 // 广度优先搜索
-function levelOrder(root) {
+ export function levelOrder(root) {
     const result = [];
     if (!root) {
         return result;
