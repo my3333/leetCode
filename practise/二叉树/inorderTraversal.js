@@ -45,6 +45,7 @@ function inorderTraversal02(root) {
 // 递归
 function firstTraversal(root) {
   let res = [];
+
   const inorder = (root) => {
     if (root) {
       res.push(root.val);
@@ -53,6 +54,7 @@ function firstTraversal(root) {
     }
     return;
   }
+
   inorder(root);
   return res;
 }
