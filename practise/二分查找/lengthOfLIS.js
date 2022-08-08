@@ -3,10 +3,11 @@
  */
 
  function lengthOfLIS(nums) {
-  // 用arr（视为栈结构）存储符合要求的元素。循环数组，比较前一个值和后一个值的大小，如果前一个值小于后一个值，且前一个值比栈顶元素大，则前一个值入栈。
+  // 用arr（视为栈结构）存储符合要求的元素。循环数组，比较前一个值和后一个值的大小，
+  // 如果前一个值小于后一个值，且前一个值比栈顶元素大，则前一个值入栈。
   let arr = [];
   for (let i = 0; i < nums.length; i++) {  // 注意边界
-      const alen = arr.length;
+      const alen = arr.length;     // 这里循环有问题。。。todo
       if (nums[i] <= nums[i + 1]) {
           if (alen) {
               // 有元素
