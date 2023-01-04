@@ -23,6 +23,13 @@
 
 // 哈希表
 function findDuplicate(nums) {
-  let taregt = -1;
-  return target;
+  let map = new Map();
+  for (let i = 0; i < nums.length; i++) {
+    if (map.has(nums[i])) {
+      return nums[i];
+    } else {
+      map.set(nums[i]);
+    }
+  }
+  return -1;
 };
